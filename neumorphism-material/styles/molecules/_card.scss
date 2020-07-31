@@ -1,4 +1,6 @@
-.card {
+@import '../atoms/variables';
+
+.nm__card {
 
   background: $col-background;
   padding: 3em;
@@ -8,7 +10,7 @@
   box-shadow: $shadow-primary;
   margin: auto auto 40px;
 
-  .card__header {
+  .nm__card--header {
 
     display: flex;
     justify-content: space-between;
