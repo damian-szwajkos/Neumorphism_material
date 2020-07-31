@@ -1,6 +1,7 @@
 /* ATOMS */
 /* BASIC */
 /* COLORS */
+/* #e5f0f9, #5f83ad, #24282d, #f4f7fa */
 /* FONTS */
 /* SHADOWS */
 /* MEDIA */
@@ -24,6 +25,42 @@ button:disabled:hover span {
   color: rgba(0, 0, 0, 0.26);
 }
 
+.nm__btn {
+  display: inline-block;
+  color: #5f83ad;
+  letter-spacing: 3px;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 1.2em 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 1.2em;
+  box-shadow: -6px -6px 8px white, -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), 6px 6px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2em;
+}
+.nm__btn:hover {
+  box-shadow: inset -6px -6px 8px white, inset -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), inset 6px 6px 8px rgba(0, 0, 0, 0.15);
+}
+.nm__btn:hover span {
+  display: inline-block;
+  transform: scale(0.98);
+  color: #5f83ad;
+}
+.nm__btn--icon {
+  width: 3em;
+  height: 3em;
+  padding: 2.2em 2.2em;
+  position: relative;
+}
+.nm__btn--icon i {
+  position: absolute;
+  font-size: 1.4em;
+  left: 34%;
+  top: 36%;
+}
+
 .col1-4 {
   width: 25%;
 }
@@ -37,19 +74,59 @@ button:disabled:hover span {
 }
 
 /* FONTS */
+h1, h2, h3, h4, h5, h6 {
+  color: #24282d;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 2.4em;
+  margin: 0 0 0.7em 0;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 2.1em;
+  margin: 0 0 0.8em 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+}
+
+h4 {
+  font-size: 1.15em;
+  font-weight: bold;
+  margin: 0 0 0.7em 0;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 0 0.8em 0;
+}
+
+i {
+  color: #5f83ad;
+}
+
 /* BASIC */
 /* COLORS */
+/* #e5f0f9, #5f83ad, #24282d, #f4f7fa */
 /* FONTS */
 /* SHADOWS */
 /* MEDIA */
 /* MOLECULES */
 /* BASIC */
 /* COLORS */
+/* #e5f0f9, #5f83ad, #24282d, #f4f7fa */
 /* FONTS */
 /* SHADOWS */
 /* MEDIA */
 .nm__card {
-  background: "";
+  background: #f1f5f9;
   padding: 3em;
   border-radius: 0.6em;
   width: 1400px;
@@ -78,8 +155,8 @@ button:disabled:hover span {
 }
 
 body {
-  background: "";
-  color: "";
+  background: #f1f5f9;
+  color: #24282d;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   line-height: 1.3;
