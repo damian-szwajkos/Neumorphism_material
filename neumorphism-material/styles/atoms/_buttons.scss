@@ -1,0 +1,23 @@
+button {
+  outline: none !important;
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    color: rgba(0,0,0,.26);
+
+    &:hover {
+      box-shadow: $shadow-primary;
+
+      span {
+        display: inline-block;
+        transform: none;
+        color: rgba(0,0,0,.26);
+      }
+    }
+
+  }
+
+}

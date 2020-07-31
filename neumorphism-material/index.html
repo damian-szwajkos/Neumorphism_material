@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neumorphism material</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     
@@ -18,27 +20,42 @@
 
         <!-- Card header -->
         <div class="nm__card--header">
+            <h1>Header</h1>
 
-
-
+            <div class="nm__card--header--controls">
+                <button class="nm__btn"><span>New button</span></button>
+                <button class="nm__btn"><span>New feature</span></button>
+            </div>
         </div>
 
         <!-- Grid -->
         <div class="nm_container">
 
             <!-- BUTTONS -->
-            
+            <button class="nm__btn"><span>Button</span></button>
 
+            <button class="btn btn__icon"><i class="fas fa-power-off"></i></button>
+
+            <br>
 
             <!-- BUTTON GROUPS -->
 
+            <div class="nm__btn--group">
+                <button class="btn"><span>Button</span></button>
+                <button class="btn"><span>Button</span></button> 
+                <button class="btn"><span>Button</span></button> 
+            </div>
 
+            <br>
 
             <!-- CARD -->
 
-
+            <div>
+            
+            </div>
 
             <!-- CHECKBOX -->
+
 
 
 
@@ -48,7 +65,9 @@
 
             <!-- DIVIDER -->
 
+            <div class="nm__divider"></div>
 
+            <div class="nm__divider--inset"></div>
 
             <!-- EXPANSION PANEL -->
 
@@ -56,15 +75,33 @@
 
             <!-- FORMS -->
 
+            <div class="nm__form-group col1-4">
+                <label for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+
+
+            <div class="nm__form-group--icon col1-4">
+                <input type="text"><i></i><i class="fas fa-key"></i>
+            </div>
 
 
             <!-- INPUTS -->
 
-
+            <input type="text" placeholder="First name">
 
             <!-- SELECT -->
 
-
+            <div class="nm__select--dropdown col1-4">
+                <button class="btn dropdown__button">
+                    <span>Simple select <span class="caret"></span></span>
+                </button>
+                <div class="nm__select--dropdown--menu">
+                    <a href="#" class="nm__option">Option one</a>
+                    <a href="#" class="nm__option">Option two</a>
+                    <a href="#" class="nm__option">Option three</a>
+                </div>
+            </div>
 
             <!-- SLIDE TOGGLE -->
 
