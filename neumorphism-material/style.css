@@ -1,0 +1,60 @@
+/* ATOMS */
+/* BASIC */
+/* COLORS */
+/* FONTS */
+/* SHADOWS */
+/* MEDIA */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+button {
+  outline: none !important;
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+button:disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+button:disabled:hover {
+  box-shadow: -6px -6px 8px white, -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), 6px 6px 8px rgba(0, 0, 0, 0.15);
+}
+button:disabled:hover span {
+  display: inline-block;
+  transform: none;
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.col1-4 {
+  width: 25%;
+}
+
+.col1-2 {
+  width: 50%;
+}
+
+.col3-4 {
+  width: 75%;
+}
+
+/* FONTS */
+/* BASIC */
+/* COLORS */
+/* FONTS */
+/* SHADOWS */
+/* MEDIA */
+/* MOLECULES */
+/* ORGANISMS */
+/* BASIC */
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: "";
+  color: "";
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+}
