@@ -1,20 +1,33 @@
 /* BASIC */
-
+$letter-spacing: 3px;
 
 
 /* COLORS */
-$col-primary: '';
+$col-primary: #24cfaa;
 $col-secondary: '';
 
+$col-success: '';
+$col-info: '';
+$col-danger: '';
+
+$col-background: '';
+$col-text: '';
 
 /* FONTS */
-$font-primary: '';
+$font-primary: 'Nunito Sans', sans-serif;
 
 
 
 /* SHADOWS */
-$shadow-primary: '';
-$shadow-primary_inset: '';
+$shadow-primary:  -6px -6px 8px rgba(255,255,255,1),
+                  -6px -6px 12px rgba(255,255,255,0.5),
+                  inset 6px 6px 4px rgba(255,255,255,0.1),
+                  6px 6px 8px rgba(0,0,0,0.15);
+
+$shadow-primary__inset: inset -6px -6px 8px rgba(255,255,255,1),
+                        inset -6px -6px 12px rgba(255,255,255,0.5),
+                        inset 6px 6px 4px rgba(255,255,255,0.1),
+                        inset 6px 6px 8px rgba(0,0,0,0.15);
 
 
 
