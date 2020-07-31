@@ -73,6 +73,24 @@ button:disabled:hover span {
   width: 75%;
 }
 
+input[type=text], input[type=password] {
+  outline: none !important;
+  background: none;
+  border: none;
+  width: 100%;
+  border-radius: 1.2em;
+  line-height: 2.5em;
+  padding: 0.4em 2em;
+  font-size: 0.95em;
+  box-shadow: inset -6px -6px 8px white, inset -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), inset 6px 6px 8px rgba(0, 0, 0, 0.15);
+  letter-spacing: 3px;
+  margin-bottom: 2em;
+}
+input[type=text]::placeholder, input[type=password]::placeholder {
+  letter-spacing: 3px;
+  color: #5f83ad;
+}
+
 /* FONTS */
 h1, h2, h3, h4, h5, h6 {
   color: #24282d;
@@ -128,7 +146,7 @@ i {
 .nm__card {
   background: #f1f5f9;
   padding: 3em;
-  border-radius: 0.6em;
+  border-radius: 2em;
   width: 1400px;
   border: none;
   box-shadow: -6px -6px 8px white, -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), 6px 6px 8px rgba(0, 0, 0, 0.15);

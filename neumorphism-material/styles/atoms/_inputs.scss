@@ -1,0 +1,19 @@
+input[type="text"], input[type="password"] {
+  outline: none !important;
+  background: none;
+  border: none;
+  width: 100%;
+  border-radius: $border-radius__md;
+  line-height: 2.5em;
+  padding: 0.4em 2em;
+  font-size: 0.95em;
+  box-shadow: $shadow-primary__inset;
+  letter-spacing: $letter-spacing;
+  margin-bottom: 2em;
+
+  &::placeholder {
+    letter-spacing: $letter-spacing;
+    color: $col-secondary;
+  }
+
+}
