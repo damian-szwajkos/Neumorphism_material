@@ -43,6 +43,32 @@ button:disabled:hover span {
 /* SHADOWS */
 /* MEDIA */
 /* MOLECULES */
+/* BASIC */
+/* COLORS */
+/* FONTS */
+/* SHADOWS */
+/* MEDIA */
+.nm__card {
+  background: "";
+  padding: 3em;
+  border-radius: 0.6em;
+  width: 1400px;
+  border: none;
+  box-shadow: -6px -6px 8px white, -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), 6px 6px 8px rgba(0, 0, 0, 0.15);
+  margin: auto auto 40px;
+}
+.nm__card .nm__card--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c7c7c7;
+  margin-bottom: 40px;
+}
+.nm__card .nm__card--header h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
 /* ORGANISMS */
 /* BASIC */
 *, body {
