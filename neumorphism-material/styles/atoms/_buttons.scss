@@ -67,4 +67,16 @@ button {
     }
 
   }
+
+  &.active {
+    box-shadow: $shadow-primary__inset;
+    border: 1px solid #5f83ad0d;
+
+    span, i {
+      display: inline-block;
+      transform: scale(0.98);
+      color: $col-primary;
+    }
+  }
+
 }

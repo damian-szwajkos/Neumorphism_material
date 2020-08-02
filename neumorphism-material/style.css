@@ -60,6 +60,53 @@ button:disabled:hover span {
   left: 34%;
   top: 36%;
 }
+.nm__btn.active {
+  box-shadow: inset -6px -6px 8px white, inset -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), inset 6px 6px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid #5f83ad0d;
+}
+.nm__btn.active span, .nm__btn.active i {
+  display: inline-block;
+  transform: scale(0.98);
+  color: #24cfaa;
+}
+
+.nm__checkbox {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 1em;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.nm__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.nm__checkbox input:checked ~ .checkmark {
+  border: 1px solid #5f83ad0d;
+  box-shadow: inset -6px -6px 8px white, inset -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), inset 6px 6px 8px rgba(0, 0, 0, 0.15), -6px -6px 8px white, -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), 6px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 0.4em;
+  box-shadow: -6px -6px 8px white, -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), 6px 6px 8px rgba(0, 0, 0, 0.15);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
 
 .col1-4 {
   width: 25%;

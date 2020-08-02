@@ -1,0 +1,65 @@
+.nm__checkbox {
+
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 1em;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+
+  &:hover {
+
+    input {
+
+      ~ .checkmark  {
+        //background-color: #ccc;
+      }
+
+    }
+
+  }
+
+  input {
+
+    &:checked {
+      ~ .checkmark {
+
+        border: 1px solid #5f83ad0d;
+        box-shadow: $shadow-primary__inset, $shadow-primary;
+
+      }
+    }
+
+  }
+
+
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 0.4em;
+  box-shadow: $shadow-primary;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+}
