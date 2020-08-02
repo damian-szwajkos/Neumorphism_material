@@ -15,6 +15,7 @@ button {
 }
 button:disabled {
   color: rgba(0, 0, 0, 0.26);
+  cursor: not-allowed;
 }
 button:disabled:hover {
   box-shadow: -6px -6px 8px white, -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), 6px 6px 8px rgba(0, 0, 0, 0.15);
@@ -224,25 +225,24 @@ i {
 .nm__form-group {
   position: relative;
 }
-.nm__form-group__label {
-  position: relative;
-}
-.nm__form-group__label label {
+.nm__form-group label {
   color: #24cfaa;
   letter-spacing: 3px;
-}
-.nm__form-group__label .no-focus {
   position: absolute;
-  left: 2em;
+  left: 2.3em;
   top: 20%;
+  font-size: 14px;
   transition: 0.4s ease all;
 }
-.nm__form-group__label .focus {
+.nm__form-group .focus {
   position: absolute;
   left: 0;
   top: -2em;
   font-size: 14px;
   transition: 0.4s ease all;
+}
+.nm__form-group__icon {
+  position: relative;
 }
 .nm__form-group__icon input {
   padding-left: 3.4em;
@@ -253,6 +253,13 @@ i {
   font-size: 18px;
   top: 20%;
   left: 1.2em;
+}
+.nm__form-group__icon label {
+  position: absolute;
+  left: 3.8em;
+  top: 20%;
+  font-size: 14px;
+  transition: 0.4s ease all;
 }
 
 /* ORGANISMS */

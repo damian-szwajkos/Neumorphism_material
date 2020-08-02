@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://kit.fontawesome.com/3148abb9a7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     
@@ -147,7 +149,7 @@
 
             <h4>Inputs with label</h4>
 
-            <div class="nm__form-group__label col1-4">
+            <div class="nm__form-group col1-4">
                 <label for="username" class="no-focus">Username</label>
                 <input type="text" id="username">
             </div>
@@ -155,7 +157,14 @@
             <h4>Inputs with icon</h4>
 
             <div class="nm__form-group nm__form-group__icon col1-4">
-                <input type="text"><i></i><i class="fas fa-key"></i>
+                <input type="text"><i class="fas fa-key"></i>
+            </div>
+
+
+            <h4>Inputs with icon and placeholder</h4>
+
+            <div class="nm__form-group nm__form-group__icon col1-4">
+                <input type="text" placeholder="Username"><i class="fas fa-key"></i>
             </div>
 
 
@@ -163,15 +172,17 @@
 
             <div class="nm__form-group nm__form-group__icon col1-4">
                 <label for="password" class="no-focus">Password</label>
-                <input type="text" id="password"><i></i><i class="fas fa-key"></i>
+                <input type="text" id="password"><i class="fas fa-key"></i>
             </div>
 
 
 
             <!-- SELECT -->
 
+            <h4>Single select</h4>
+
             <div class="nm__select--dropdown col1-4">
-                <button class="btn dropdown__button">
+                <button class="nm__btn dropdown__button">
                     <span>Simple select <span class="caret"></span></span>
                 </button>
                 <div class="nm__select--dropdown--menu">
@@ -181,6 +192,28 @@
                 </div>
             </div>
 
+
+            <h4>Multiple select</h4>
+
+            <div class="nm__select--dropdown multiple col1-4">
+                <button class="nm__btn dropdown__button">
+                    <span>Simple select <span class="caret"></span></span>
+                </button>
+                <div class="nm__select--dropdown--menu">
+                    <a href="#" class="nm__option">Option one</a>
+                    <a href="#" class="nm__option">Option two</a>
+                    <a href="#" class="nm__option">Option three</a>
+                </div>
+            </div>
+
+
+            <div class="nm__select">
+                <select name="Single select" id="">
+                    <option value="">Option one</option>
+                    <option value="">Option two</option>
+                    <option value="">Option three</option>
+                </select>
+            </div>
 
             <!-- SLIDE TOGGLE -->
 
