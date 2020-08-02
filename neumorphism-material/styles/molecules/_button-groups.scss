@@ -1,0 +1,13 @@
+.nm__btn--group {
+
+  display: block;
+
+  .nm__btn {
+
+    &:not(:last-child) {
+      margin-right: 5em;
+    }
+
+  }
+
+}

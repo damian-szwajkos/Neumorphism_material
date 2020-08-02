@@ -23,7 +23,7 @@
         <div class="nm__card--header">
             <h1>Header</h1>
 
-            <div class="nm__card--header--controls">
+            <div class="nm__card--header__controls">
                 <button class="nm__btn"><span>New button</span></button>
                 <button class="nm__btn"><span>New feature</span></button>
             </div>
@@ -66,6 +66,20 @@
                 <button class="nm__btn"><span>Button</span></button>
                 <button class="nm__btn"><span>Button</span></button>
                 <button class="nm__btn"><span>Button</span></button>
+            </div>
+
+            <div class="nm__btn--group">
+                <button class="nm__btn nm__btn--icon"><i class="fas fa-power-off"></i></button>
+                <button class="nm__btn nm__btn--icon"><i class="fas fa-cog"></i></button>
+                <button class="nm__btn nm__btn--icon"><i class="fas fa-user"></i></button>
+            </div>
+
+            <h4>Active button</h4>
+
+            <div class="nm__btn--group">
+                <button class="nm__btn nm__btn--icon active"><i class="fas fa-power-off"></i></button>
+                <button class="nm__btn nm__btn--icon"><i class="fas fa-cog"></i></button>
+                <button class="nm__btn nm__btn--icon"><i class="fas fa-user"></i></button>
             </div>
 
             <br>
@@ -116,16 +130,25 @@
 
             <h4>Inputs with label</h4>
 
-            <div class="nm__form-group col1-4">
-                <label for="username">Username</label>
+            <div class="nm__form-group__label col1-4">
+                <label for="username" class="no-focus">Username</label>
                 <input type="text" id="username">
             </div>
 
             <h4>Inputs with icon</h4>
 
-            <div class="nm__form-group--icon col1-4">
+            <div class="nm__form-group nm__form-group__icon col1-4">
                 <input type="text"><i></i><i class="fas fa-key"></i>
             </div>
+
+
+            <h4>Inputs with icon and label</h4>
+
+            <div class="nm__form-group nm__form-group__icon col1-4">
+                <label for="password" class="no-focus">Password</label>
+                <input type="text" id="password"><i></i><i class="fas fa-key"></i>
+            </div>
+
 
 
             <!-- SELECT -->
@@ -139,6 +162,15 @@
                     <a href="#" class="nm__option">Option two</a>
                     <a href="#" class="nm__option">Option three</a>
                 </div>
+            </div>
+            
+            
+            <div>
+                <select name="Simple select" id="">
+                    <option value="">Option one</option>
+                    <option value="">Option two</option>
+                    <option value="">Option three</option>
+                </select>
             </div>
 
             <!-- SLIDE TOGGLE -->

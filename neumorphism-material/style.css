@@ -76,7 +76,7 @@ button:disabled:hover span {
 input[type=text], input[type=password] {
   outline: none !important;
   background: none;
-  border: none;
+  border: 1px solid #5f83ad0d;
   width: 100%;
   border-radius: 1.2em;
   line-height: 2.5em;
@@ -137,6 +137,13 @@ i {
 /* SHADOWS */
 /* MEDIA */
 /* MOLECULES */
+.nm__btn--group {
+  display: block;
+}
+.nm__btn--group .nm__btn:not(:last-child) {
+  margin-right: 5em;
+}
+
 /* BASIC */
 /* COLORS */
 /* #e5f0f9, #5f83ad, #24282d, #f4f7fa */
@@ -162,6 +169,43 @@ i {
 .nm__card .nm__card--header h1 {
   font-size: 32px;
   margin-bottom: 20px;
+}
+.nm__card .nm__card--header__controls .nm__btn:not(:last-child) {
+  margin-right: 5em;
+}
+
+.nm__form-group {
+  position: relative;
+}
+.nm__form-group__label {
+  position: relative;
+}
+.nm__form-group__label label {
+  color: #24cfaa;
+  letter-spacing: 3px;
+}
+.nm__form-group__label .no-focus {
+  position: absolute;
+  left: 2em;
+  top: 20%;
+  transition: 0.4s ease all;
+}
+.nm__form-group__label .focus {
+  position: absolute;
+  left: 0;
+  top: -2em;
+  font-size: 14px;
+  transition: 0.4s ease all;
+}
+.nm__form-group__icon input {
+  padding-left: 3.4em;
+}
+.nm__form-group__icon i {
+  color: #24cfaa;
+  position: absolute;
+  font-size: 18px;
+  top: 20%;
+  left: 1.2em;
 }
 
 /* ORGANISMS */

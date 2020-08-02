@@ -1,7 +1,7 @@
 input[type="text"], input[type="password"] {
   outline: none !important;
   background: none;
-  border: none;
+  border: 1px solid #5f83ad0d;
   width: 100%;
   border-radius: $border-radius__md;
   line-height: 2.5em;
