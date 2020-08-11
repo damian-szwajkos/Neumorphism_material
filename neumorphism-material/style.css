@@ -26,7 +26,7 @@ button:disabled:hover span {
   color: rgba(0, 0, 0, 0.26);
 }
 
-.nm__btn {
+.nm__btn, .nm-select__btn {
   display: inline-block;
   color: #5f83ad;
   letter-spacing: 3px;
@@ -41,31 +41,31 @@ button:disabled:hover span {
   box-shadow: -6px -6px 8px white, -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), 6px 6px 8px rgba(0, 0, 0, 0.15);
   margin-bottom: 2em;
 }
-.nm__btn:hover {
+.nm__btn:hover, .nm-select__btn:hover {
   box-shadow: inset -6px -6px 8px white, inset -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), inset 6px 6px 8px rgba(0, 0, 0, 0.15);
 }
-.nm__btn:hover span {
+.nm__btn:hover span, .nm-select__btn:hover span {
   display: inline-block;
   transform: scale(0.98);
   color: #5f83ad;
 }
-.nm__btn--icon {
+.nm__btn--icon, .nm-select__btn--icon {
   width: 3em;
   height: 3em;
   padding: 2.2em 2.2em;
   position: relative;
 }
-.nm__btn--icon i {
+.nm__btn--icon i, .nm-select__btn--icon i {
   position: absolute;
   font-size: 1.4em;
   left: 34%;
   top: 36%;
 }
-.nm__btn.active {
+.nm__btn.active, .nm-select__btn.active {
   box-shadow: inset -6px -6px 8px white, inset -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), inset 6px 6px 8px rgba(0, 0, 0, 0.15);
   border: 1px solid #5f83ad0d;
 }
-.nm__btn.active span, .nm__btn.active i {
+.nm__btn.active span, .nm__btn.active i, .nm-select__btn.active span, .nm-select__btn.active i {
   display: inline-block;
   transform: scale(0.98);
   color: #24cfaa;
@@ -260,6 +260,71 @@ i {
   top: 20%;
   font-size: 14px;
   transition: 0.4s ease all;
+}
+
+.nm-select {
+  position: relative;
+  margin-bottom: 5em;
+}
+.nm-select select, .nm-select label {
+  display: none;
+}
+
+.nm-select__dropdown {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nm-select__dropdown button {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0;
+}
+.nm-select__dropdown.open {
+  box-shadow: inset -6px -6px 8px white, inset -6px -6px 12px rgba(255, 255, 255, 0.5), inset 6px 6px 4px rgba(255, 255, 255, 0.1), inset 6px 6px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 1.2em;
+  background: #f1f5f9;
+  z-index: 100;
+}
+.nm-select__dropdown.open button {
+  box-shadow: none;
+}
+.nm-select__dropdown .nm-select__dropdown--menu {
+  display: none;
+}
+.nm-select__dropdown .nm-select__dropdown--menu ul {
+  list-style: none;
+  border: none;
+  background: none;
+}
+.nm-select__dropdown .nm-select__dropdown--menu ul li a {
+  display: block;
+  padding: 1.4em 2.6em;
+  width: 100%;
+  font-size: 0.8em;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #24282d;
+}
+.nm-select__dropdown .nm-select__dropdown--menu ul li .highlighted {
+  background: none;
+  color: #24cfaa;
+  cursor: pointer;
+  text-decoration: none;
+}
+.nm-select__dropdown .nm-select__dropdown--menu ul li .selected {
+  color: #24cfaa;
+  font-weight: bold;
+}
+.nm-select__dropdown .nm-select__dropdown--menu ul li .nm-select__btn--category {
+  font-weight: bold;
+}
+.nm-select__dropdown .nm-select__dropdown--submenu .nm-select__dropdown--submenu-options {
+  display: none;
 }
 
 /* ORGANISMS */

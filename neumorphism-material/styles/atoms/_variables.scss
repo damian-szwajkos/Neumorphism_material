@@ -37,6 +37,14 @@ $shadow-primary__inset: inset -6px -6px 8px rgba(255,255,255,1),
 
 
 
+$shadow-secondary: -8px -4px 8px 0px #ffffff,
+                    8px 4px 12px 0px #d1d9e6;
+
+
+$shadow-secondary__inset: inset -8px -4px 8px 0px #ffffff,
+                   inset 8px 4px 12px 0px #d1d9e6;
+
+
 /* MEDIA */
 $wrapper: '';
 $breakpoint-sm: '';

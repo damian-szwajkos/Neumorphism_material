@@ -179,41 +179,147 @@
 
             <!-- SELECT -->
 
+            <div class="nm-select col1-4">
+                <label for="selectOne">Select number</label>
+                <select name="Single select" id="selectOne">
+                    <option value="">Option one</option>
+                    <option value="">Option two</option>
+                    <option value="">Option three</option>
+                </select>
+            </div>
+
+            <div class="nm-select col1-4">
+                <label for="">Select number</label>
+                <select name="Single select" multiple id="">
+                    <option value="">Option four</option>
+                    <option value="">Option five</option>
+                    <option value="">Option six</option>
+                </select>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h4>Select with categories</h4>
+
+            <div class="nm-select col1-4">
+                <label for="cars">Select car</label>
+                <select name="Single select" id="cars">
+                    <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                    </optgroup>
+                    <optgroup label="German Cars">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </optgroup>
+                </select>
+            </div>
+
+
             <h4>Single select</h4>
 
-            <div class="nm__select--dropdown col1-4">
-                <button class="nm__btn dropdown__button">
-                    <span>Simple select <span class="caret"></span></span>
-                </button>
-                <div class="nm__select--dropdown--menu">
-                    <a href="#" class="nm__option">Option one</a>
-                    <a href="#" class="nm__option">Option two</a>
-                    <a href="#" class="nm__option">Option three</a>
+            <div class="nm__select--dropdown col1-4 open" style="display: none">
+                <button class="nm__btn">Single select <span class="nm__btn--caret"></span></button>
+                <div class="nm__select--dropdown-menu">
+                    <ul class="nm__select--dropdown-options">
+                        <!-- Option -->
+                        <li class="nm__option">
+                            <a href="#">Option one</a>
+                        </li>
+
+                        <li class="nm__option">
+                            <a href="#">Option two</a>
+                        </li>
+
+                        <li class="nm__option">
+                            <a href="#">Option three</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
 
             <h4>Multiple select</h4>
 
-            <div class="nm__select--dropdown multiple col1-4">
-                <button class="nm__btn dropdown__button">
-                    <span>Simple select <span class="caret"></span></span>
-                </button>
-                <div class="nm__select--dropdown--menu">
-                    <a href="#" class="nm__option">Option one</a>
-                    <a href="#" class="nm__option">Option two</a>
-                    <a href="#" class="nm__option">Option three</a>
+            <div class="nm__select--dropdown multiple col1-4" style="display: none">
+                <button class="nm__btn">Single select <span class="nm__btn--caret"></span></button>
+                <div class="nm__select--dropdown-menu">
+                    <ul class="nm__select--dropdown-options">
+                        <!-- Option -->
+                        <li class="nm__option">
+                            <a href="#">Option one</a>
+                        </li>
+
+                        <li class="nm__option">
+                            <a href="#">Option two</a>
+                        </li>
+
+                        <li class="nm__option">
+                            <a href="#">Option three</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
 
-            <div class="nm__select">
-                <select name="Single select" id="">
-                    <option value="">Option one</option>
-                    <option value="">Option two</option>
-                    <option value="">Option three</option>
-                </select>
+            <h4>Select with categories</h4>
+
+            <div class="nm__select--dropdown col1-4" style="display: none">
+                <button class="nm__btn">Single select <span class="nm__btn--caret"></span></button>
+                <div class="nm__select--dropdown-menu">
+                    <ul>
+                        <!-- Option group -->
+                        <li class="nm-select__dropdown--submenu">
+                            <a href="#" class="nm-select__btn--category">Category one <span class="nm__btn--caret"></span></a>
+                            <ul class="nm-select__dropdown--options">
+                                <!-- Option -->
+                                <li class="nm__option">
+                                    <a href="#">Option one</a>
+                                </li>
+
+                                <li class="nm__option">
+                                    <a href="#">Option two</a>
+                                </li>
+
+                                <li class="nm__option">
+                                    <a href="#">Option three</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
+
+
+            <h4>Select with search</h4>
+
+            <div class="nm__select--dropdown col1-4 open" style="display: none">
+                <button class="nm__btn">Single select <span class="nm__btn--caret"></span></button>
+                <div class="nm__select--dropdown-menu">
+                    <input type="text">
+                    <ul class="nm__select--dropdown-options">
+                        <!-- Option -->
+                        <li class="nm__option">
+                            <a href="#">Option one</a>
+                        </li>
+
+                        <li class="nm__option">
+                            <a href="#">Option two</a>
+                        </li>
+
+                        <li class="nm__option">
+                            <a href="#">Option three</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
 
             <!-- SLIDE TOGGLE -->
 
