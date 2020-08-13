@@ -115,14 +115,13 @@ $(document).ready(function() {
             $submenu.removeClass('open');
             $submenu.hide();
         } else {
-            // $('.nm-select__btn--category').parent().find('ul').removeClass('open');
-            // $('.nm-select__btn--category').parent().find('ul').children('li').removeClass('visible');
+            $('.nm-select__btn--category').siblings('ul').removeClass('open');
+            $('.nm-select__btn--category').siblings('ul').children('li').removeClass('visible');
+            $('.nm-select__btn--category').siblings('ul').hide();
             $submenu.children('li').addClass('visible');
             $submenu.addClass('open');
             $submenu.show();
         }
-
-        // todo: We need here to get options and append them to array.
 
         let selectIndex = $(this).attr('data-category');
 
@@ -133,14 +132,8 @@ $(document).ready(function() {
     });
 
 
-    function toggleSubmenu() {
-
-    }
-
-
     // Select option
     $('.nm-select__dropdown--option').on('click keypress', function(e) {
-        // todo: doesn't work on Enter press
         if( e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13) ){
             selectOption($(this), e);
         }
@@ -211,8 +204,6 @@ $(document).ready(function() {
 
         // todo: Refactor needed
         initSelectOptions($selector.parent('.nm-select__dropdown'));
-        console.log(options);
-        console.log(selectIndex);
     }
 
 
@@ -225,8 +216,8 @@ $(document).ready(function() {
     function highlightSelection($selector) {
         $('a[role="menuitem"]').removeClass('highlighted');
         $selector.addClass('highlighted');
-        // console.log($selector);
         setSelectIndex('.highlighted');
+        $('.highlighted').focus();
     }
 
 
@@ -279,7 +270,6 @@ $(document).ready(function() {
 
     function setSelectIndex(selector) {
         selectIndex = options.indexOf($(selector).get(0));
-        console.log(selectIndex);
     }
 
 
