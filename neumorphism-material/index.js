@@ -15,6 +15,8 @@
 
 
 let options;
+let optionStored;
+let optionsToSearch;
 let selectIndex;
 const keyCodes = [35, 36, 38, 40];
 
@@ -29,6 +31,7 @@ $(document).ready(function() {
         $this.find('select').attr('data-select', 'nm-select--' + index);
 
         // Build button name ?
+        // Todo: If Button name == null -> button name should be first option in select
         let buttonName = $this.find('label').html();
 
         let dropdownHtml = `<div class="nm-select__dropdown" id="nm-select--${index}">
@@ -41,29 +44,27 @@ $(document).ready(function() {
 
         $this.append(dropdownHtml);
 
-        let isSearch = $this.hasClass('search');
-
-        if (isSearch) {
-            let searchHtml = `<div class="nm__select--dropdown--search">
-                                <input type="text"><i class="fas fa-search"></i>
-                              </div>`;
-        }
-
 
         let $optGroups = $this.find('select').find('optgroup').toArray();
 
         if ($optGroups.length > 0) {
             buildOptionGroups($this, $optGroups, index);
         } else {
-            buildOptions($this);
+            let $options = $this.find('option').toArray();
+            buildOptions($this, $options);
         }
 
+
+        let isSearch = $this.hasClass('search');
+
+        if (isSearch) {
+            buildSearch($this, index);
+        }
     });
 
 
-    function buildOptions($select) {
+    function buildOptions($select, $options) {
 
-        let $options = $select.find('option').toArray();
 
         $options.forEach(function(item) {
             let optionName = $(item).html();
@@ -104,6 +105,15 @@ $(document).ready(function() {
 
         });
 
+    }
+
+
+    function buildSearch($selector, index) {
+        let searchHtml = `<div class="nm__select--dropdown--search">
+                                <input type="text" data-search="nm-select--${index}"><i class="fas fa-search"></i>
+                          </div>`;
+
+        $selector.find(`#nm-select--${index} .nm-select__dropdown--menu`).prepend(searchHtml);
     }
 
 
@@ -229,9 +239,9 @@ $(document).ready(function() {
 
     // Close dropdown after click at document
     $(document).click(function(e) {
-       if(!$(e.target).hasClass('nm-select__btn')) {
-           closeDropdown();
-       }
+        if(!$(e.target).is('.nm-select__btn, input[data-search]')) {
+            closeDropdown();
+        }
     });
 
 
@@ -285,6 +295,50 @@ $(document).ready(function() {
            closeDropdown();
        }
     });
+
+
+
+
+    $('input[data-search]').focus(function() {
+
+        console.log(300, $(this).attr('data-search'));
+
+        let selectId = $(this).attr('data-search');
+        let $select = $('#' + selectId);
+
+        optionsToSearch = $select.find('li.visible').children('a').toArray();
+
+        console.log(500, optionsToSearch);
+
+    });
+
+
+    $('input[data-search]').keyup(function() {
+        searchOption($(this));
+    })
+
+
+
+    function searchOption($input) {
+        console.log($($input).val());
+
+
+        let searchedValue = $($input).val().toUpperCase();
+
+        optionsToSearch.forEach(function(element) {
+
+            let elementValue = element.innerHTML.toUpperCase();
+
+            if(elementValue.startsWith(searchedValue)) {
+                console.log(600, element.innerHTML);
+            }
+
+
+        });
+
+
+    }
+
 
 
     /* INPUTS */

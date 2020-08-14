@@ -51,6 +51,11 @@ button {
     }
   }
 
+  /* Redesign this event */
+  &:focus {
+    border: 1px solid green;
+  }
+
   &--icon {
     width: 3em;
     height: 3em;

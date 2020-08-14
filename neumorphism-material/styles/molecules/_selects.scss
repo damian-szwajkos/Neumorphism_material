@@ -93,4 +93,25 @@
   }
 
 
+  .nm__select--dropdown--search {
+
+    position: relative;
+
+    input {
+      margin-bottom: 0;
+      box-shadow: none;
+      padding: 0.2em 3.4em;
+    }
+
+    i {
+      position: absolute;
+      font-size: 16px;
+      top: 32%;
+      left: 1.2em;
+      color: $col-primary;
+    }
+
+
+  }
+
 }
