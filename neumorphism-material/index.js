@@ -14,8 +14,11 @@
 // 6. Multiple select changes - Choosen values should appear on select button
 
 
+/* Selector */
+let $activeSelect;
+
 let options;
-let optionStored;
+let optionsStored;
 let optionsToSearch;
 let selectIndex;
 const keyCodes = [35, 36, 38, 40];
@@ -31,7 +34,9 @@ $(document).ready(function() {
         $this.find('select').attr('data-select', 'nm-select--' + index);
 
         // Build button name ?
-        // Todo: If Button name == null -> button name should be first option in select
+        // Todo: If Button name == null -> button name should be first option in select.
+        //  Add <span> for button name.
+
         let buttonName = $this.find('label').html();
 
         let dropdownHtml = `<div class="nm-select__dropdown" id="nm-select--${index}">
@@ -119,21 +124,22 @@ $(document).ready(function() {
 
     $('.nm-select__btn--category').click(function(e) {
         let $submenu = $(this).siblings('.nm-select__dropdown--submenu-options');
+        let $btnCategory = $('.nm-select__btn--category');
 
         if ($submenu.hasClass('open')) {
             $submenu.children('li').removeClass('visible')
             $submenu.removeClass('open');
             $submenu.hide();
         } else {
-            $('.nm-select__btn--category').siblings('ul').removeClass('open');
-            $('.nm-select__btn--category').siblings('ul').children('li').removeClass('visible');
-            $('.nm-select__btn--category').siblings('ul').hide();
+            $btnCategory.siblings('ul').removeClass('open');
+            $btnCategory.siblings('ul').children('li').removeClass('visible');
+            $btnCategory.siblings('ul').hide();
             $submenu.children('li').addClass('visible');
             $submenu.addClass('open');
             $submenu.show();
         }
 
-        let selectIndex = $(this).attr('data-category');
+        selectIndex = $(this).attr('data-category');
 
         initSelectOptions($('#' + selectIndex));
 
@@ -144,11 +150,11 @@ $(document).ready(function() {
 
     // Select option
     $('.nm-select__dropdown--option').on('click keypress', function(e) {
-        if( e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13) ){
+        if(e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13) ){
             selectOption($(this), e);
         }
     });
-
+    
 
     function selectOption(selector, event) {
         let $select = $('.nm-select__dropdown.open').siblings('select');
@@ -213,7 +219,11 @@ $(document).ready(function() {
         }
 
         // todo: Refactor needed
-        initSelectOptions($selector.parent('.nm-select__dropdown'));
+        if (optionsStored === undefined) {
+            initSelectOptions($selector.parent('.nm-select__dropdown'));
+        } else {
+            options = optionsStored;
+        }
     }
 
 
@@ -285,7 +295,6 @@ $(document).ready(function() {
 
     function initSelectOptions(selector) {
         options = selector.find('li.visible').children('a').toArray();
-        console.log(200, options);
     }
 
 
@@ -300,16 +309,11 @@ $(document).ready(function() {
 
 
     $('input[data-search]').focus(function() {
-
-        console.log(300, $(this).attr('data-search'));
-
         let selectId = $(this).attr('data-search');
-        let $select = $('#' + selectId);
+        $activeSelect = $('#' + selectId);
 
-        optionsToSearch = $select.find('li.visible').children('a').toArray();
-
-        console.log(500, optionsToSearch);
-
+        optionsToSearch = $activeSelect.find('li.visible').children('a').toArray();
+        optionsStored = options;
     });
 
 
@@ -322,21 +326,37 @@ $(document).ready(function() {
     function searchOption($input) {
         console.log($($input).val());
 
-
         let searchedValue = $($input).val().toUpperCase();
 
-        optionsToSearch.forEach(function(element) {
+        // Clear the options list in DOM
+        $activeSelect.find('.nm-select__dropdown--options').html('');
 
-            let elementValue = element.innerHTML.toUpperCase();
+        if (searchedValue === "") {
+            options = optionsStored;
+        } else {
 
-            if(elementValue.startsWith(searchedValue)) {
-                console.log(600, element.innerHTML);
+            options = [];
+
+            optionsToSearch.forEach(function(element) {
+
+                let elementValue = element.innerHTML.toUpperCase();
+
+                if(elementValue.startsWith(searchedValue)) {
+                    options.push(element);
+                }
+
+            });
+        }
+
+        // todo: Add proper events after appending option to DOM. Events are lost when we generate options here.
+        buildOptions($activeSelect, options);
+
+        // todo: Bind this event in more efficent way
+        $('.nm-select__dropdown--option').on('click keypress', function(e) {
+            if(e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13) ){
+                selectOption($(this), e);
             }
-
-
         });
-
-
     }
 
 
