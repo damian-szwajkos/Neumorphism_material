@@ -17,7 +17,7 @@
   left: 0;
   top: 0;
 
-  button {
+  .nm-select__btn {
     width: 100%;
     text-align: left;
     margin-bottom: 0;
@@ -29,7 +29,7 @@
     background: $col-background;
     z-index: 100;
 
-    button {
+    .nm-select__btn {
       box-shadow: none;
     }
 
@@ -113,5 +113,10 @@
 
 
   }
+
+  span {
+    pointer-events: none;
+  }
+
 
 }

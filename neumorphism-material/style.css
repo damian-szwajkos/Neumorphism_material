@@ -280,7 +280,7 @@ i {
   left: 0;
   top: 0;
 }
-.nm-select__dropdown button {
+.nm-select__dropdown .nm-select__btn {
   width: 100%;
   text-align: left;
   margin-bottom: 0;
@@ -291,7 +291,7 @@ i {
   background: #f1f5f9;
   z-index: 100;
 }
-.nm-select__dropdown.open button {
+.nm-select__dropdown.open .nm-select__btn {
   box-shadow: none;
 }
 .nm-select__dropdown .nm-select__dropdown--menu {
@@ -344,6 +344,9 @@ i {
   top: 32%;
   left: 1.2em;
   color: #24cfaa;
+}
+.nm-select__dropdown span {
+  pointer-events: none;
 }
 
 /* ORGANISMS */
