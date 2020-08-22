@@ -1,5 +1,10 @@
-let path = require('path');
-let webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const extractPlugin = new ExtractTextPlugin({
+    filename: 'main.css'
+})
 
 module.exports = {
     entry: './src/js/app.js',
@@ -10,6 +15,17 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['babel-preset-es2015']
+                        }
+                    }
+                ]
+            },
             {
                 test: /\.css$/,
                 use: [

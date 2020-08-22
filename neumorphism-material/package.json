@@ -9,10 +9,17 @@
     "build-dev": "webpack src/js/app.js --output dist/bundle.js --mode development",
     "build-prod": "webpack -p"
   },
-  "author": "",
+  "author": "Damian Szwajkos",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
     "css-loader": "^4.2.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
