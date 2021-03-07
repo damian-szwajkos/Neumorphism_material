@@ -1,6 +1,6 @@
 # Neumorphism_material
 
-CSS library designed in neumorphism style.
+CSS library designed in neumorphism style. Library is styled by means of SCSS with atomic design structure.
 
 ## Instalation
 
