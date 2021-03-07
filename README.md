@@ -8,5 +8,11 @@ CSS library designed in neumorphism style.
 
 ## Build with:
 
+1. HTML
+2. SCSS
+3. jQuery
 
 ## Tools:
+
+1. Intellij IDEA
+2. Visual Studio Code
