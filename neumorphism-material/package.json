@@ -1,7 +1,7 @@
 {
   "name": "neumorphism-material",
   "version": "1.0.0",
-  "description": "",
+  "description": "CSS library designed in neumorphism style. Library is styled by means of SCSS with atomic design structure.",
   "main": "src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,5 +35,17 @@
   },
   "dependencies": {
     "jquery": "^3.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Szwajcii/Neumorphism_material.git"
+  },
+  "keywords": [
+    "neumorphism",
+    "material"
+  ],
+  "bugs": {
+    "url": "https://github.com/Szwajcii/Neumorphism_material/issues"
+  },
+  "homepage": "https://github.com/Szwajcii/Neumorphism_material#readme"
 }
