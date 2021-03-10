@@ -1,10 +1,14 @@
-export function initInputs() {
+export function initForms() {
+    console.log("Forms ready")
+
     /* INPUTS */
-    $('.nm__form-group input').focus(function() {
+    let $formGroupInput = $('.nm__form-group input');
+
+    $formGroupInput.focus(function() {
         $(this).siblings('label').addClass('focus').removeClass('no-focus');
     });
 
-    $('.nm__form-group input').blur(function() {
+    $formGroupInput.blur(function() {
         if($(this).val() === "") {
             $(this).siblings('label').addClass('no-focus').removeClass('focus');
         }

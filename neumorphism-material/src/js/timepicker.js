@@ -1,3 +1,5 @@
-export function buildTimepicker() {
+export function initTimepicker() {
+
+    console.log("Timepicker ready!");
 
 }

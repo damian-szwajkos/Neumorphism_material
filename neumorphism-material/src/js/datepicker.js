@@ -1,3 +1,5 @@
-export function buildDatepicker() {
+export function initDatepicker() {
+
+    console.log("DatePickers ready!");
 
 }
