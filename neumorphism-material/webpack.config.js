@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const MiniCSS = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Html = require('html-webpack-plugin');
 const Compression = require('compression-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -34,34 +34,17 @@ module.exports = {
                 ]
             },
             {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            },
-            {
                 test: /\.scss$/,
-                use: [
-                    MiniCSS.loader,
-                    {
-                      loader: 'css-loader',
-                      options: {
-                          sourceMap: true
-                      }
-                    },
-                    {
-                      loader: 'postcss-loader',
-                      options: {
-                          plugins: () => [autoprefixer()]
-                      }
-                    },
-                    {
-                        loader: 'sass-loader',
+                exclude: /node_modules/,
+                use: [{
+                        loader: MiniCssExtractPlugin.loader,
                         options: {
-                            sourceMap: true
+                            reloadAll: true
                         }
-                    }
+                    },
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader'
                 ]
             },
             {
@@ -76,16 +59,8 @@ module.exports = {
         ]
     },
     plugins: [
-        new Html({
-            filename: "index.html",
-            template: "./index.html"
-        }),
-        new MiniCSS({
-            filename: "main.css"
-        }),
-        new Compression({
-            threshold: 0,
-            minRatio: 0.5
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
         })
     ]
 }
