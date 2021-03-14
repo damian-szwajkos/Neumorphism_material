@@ -1,3 +1,5 @@
+import '../styles/style.scss';
+
 const {initCheckBoxes} = require("./checkboxes");
 const {initDatepicker} = require("./datepicker");
 const {initForms} = require("./forms");
