@@ -1,0 +1,18 @@
+# dependencies
+/node_modules
+
+# folders
+/src
+
+webpack.config.js
+
+# IDEs and editors
+/.idea
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
