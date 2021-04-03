@@ -1,6 +1,6 @@
 {
   "name": "neumorphism-material",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "CSS library designed in neumorphism style. Library is styled by means of SCSS with atomic design structure.",
   "main": "src/js/app.js",
   "scripts": {
