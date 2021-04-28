@@ -1,3 +1,7 @@
+import '../styles/style.scss';
+
+import {buildSingleSelects} from "./select-single";
+
 const {initCheckBoxes} = require("./checkboxes");
 const {initDatepicker} = require("./datepicker");
 const {initForms} = require("./forms");
@@ -12,4 +16,7 @@ $(document).ready(function() {
     initSelects();
     initTimepicker();
     initTooltips();
+
+    // buildSingleSelects();
+
 });
